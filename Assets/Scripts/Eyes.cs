@@ -5,7 +5,6 @@ using UnityEngine;
 public class Eyes : MonoBehaviour {
 
 	private Camera eyes;
-	// Update is called once per frame
 
 	void Start() {
 		eyes = gameObject.GetComponent<Camera>();

@@ -10,11 +10,10 @@ private GameObject spawnCollection;
 public bool reSpawn = false;
 public GameObject playerControler;
 
-	// Use this for initialization
+
 	void Start () {
 	spawnCollection = GameObject.Find("Player Spawn Points");
 	spawnPoints = spawnCollection.GetComponentsInChildren<Transform>();
-		
 	}
 
 	void Update () {
@@ -28,6 +27,6 @@ public GameObject playerControler;
 void ReSpawn(){
 	Instantiate(playerControler, spawnPoint, false);
 	reSpawn = false;
-}
+	}
 
 }
