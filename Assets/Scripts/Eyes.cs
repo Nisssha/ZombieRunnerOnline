@@ -6,14 +6,20 @@ public class Eyes : MonoBehaviour {
 
 	private Camera eyes;
 
-	void Start() {
+	void Start()
+    {
 		eyes = gameObject.GetComponent<Camera>();
 	}
 
-	void Update () {
-		if (Input.GetButton("Zoom")) {
+    //zooming the view through input key
+	void Update ()
+    {
+		if (Input.GetButton("Zoom"))
+        {
 			eyes.fieldOfView = 30f;
-		}else{
+		}
+        else
+        {
 			eyes.fieldOfView = 60f;
 		}
 	}

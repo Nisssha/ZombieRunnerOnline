@@ -7,23 +7,23 @@ public class RadioSystem : MonoBehaviour {
 	private AudioSource audioSource;
 	public AudioClip initialHeliCall;
 	public AudioClip initialCallReply;
-	// Use this for initialization
-	void Start () {
+
+	void Start ()
+    {
 		audioSource = GetComponent<AudioSource>();	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-	void OnMakeInitialHeliCall () {
+    //call helicopter
+	void OnMakeInitialHeliCall ()
+    {
 		audioSource.clip = initialHeliCall;
 		audioSource.Play();
 		Invoke ("InitialReply", initialHeliCall.length+ 1f);
 	}
 
-	void InitialReply (){
+    //call helicopter
+	void InitialReply ()
+    {
 		audioSource.clip = initialCallReply;
 		audioSource.Play();
 		BroadcastMessage("OnDispatchHelicopter", 1f);

@@ -11,20 +11,25 @@ public bool reSpawn = false;
 public GameObject playerControler;
 
 
-	void Start () {
+	void Start ()
+    {
 	spawnCollection = GameObject.Find("Player Spawn Points");
 	spawnPoints = spawnCollection.GetComponentsInChildren<Transform>();
 	}
 
-	void Update () {
-		if (reSpawn){
+    // calling respawning player in random place from pre-set list of positions
+	void Update ()
+    {
+		if (reSpawn)
+        {
 		spawnPoint = spawnPoints[Random.Range(1, spawnPoints.Length)];
-		Debug.Log(spawnPoint.position);
 		ReSpawn();
 		}
 	}
 
-void ReSpawn(){
+    //instantiating (respawning) player
+void ReSpawn()
+    {
 	Instantiate(playerControler, spawnPoint, false);
 	reSpawn = false;
 	}

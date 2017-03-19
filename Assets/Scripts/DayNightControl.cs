@@ -8,7 +8,9 @@ public class DayNightControl : MonoBehaviour {
 
     float degreesPerFrame;
 
-    void Update () {
+    //rotating the light source (sun in the environment) to create day/night cycle
+    void Update ()
+    {
         degreesPerFrame = minutesPerSecond * Time.deltaTime * 360 / 1440;
         transform.Rotate(degreesPerFrame,0,0,Space.Self);
     }

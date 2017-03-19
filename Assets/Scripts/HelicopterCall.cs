@@ -7,14 +7,15 @@ public class HelicopterCall : MonoBehaviour {
 private bool helicopterCalled = false;
 private Rigidbody rigidBody;
 
-	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		rigidBody = GetComponent<Rigidbody>();
 	}
 
-void OnDispatchHelicopter () {
-			Debug.Log("Helicopter dispatched");
-			helicopterCalled = true;
-			rigidBody.velocity = new Vector3 (0,0,50f);	
+//calling the helicopter and setting the helicopter object in the scene into motion
+void OnDispatchHelicopter ()
+    {
+		helicopterCalled = true;
+		rigidBody.velocity = new Vector3 (0,0,50f);	
 	}
 }
